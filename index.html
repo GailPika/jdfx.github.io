@@ -44,11 +44,19 @@
             EnterTime = "进入时间：" + time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time
                 .getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
             document.getElementById("times").innerHTML = nowTime;
-            document.getElementById("timeName").innerHTML = EnterTime;
             document.getElementById("qjkssj").innerHTML = qjksTime;
             document.getElementById("qjjssj").innerHTML = qjjsTime;
         }
-        setInterval(play, 1000); //每一秒执行一次
+        setInterval(play, 500); //每0.5秒执行一次
+        function start(){
+            let time = new Date();
+            let Minuites = time.getMinutes();
+            if (Minuites<10)
+                Minuites = '0'+Minuites;
+            entertime =  "进入时间：" + time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time
+            .getHours() + ":" + Minuites + ":" + time.getSeconds();
+        document.getElementById("timeName").innerHTML = entertime;
+        }
     </script>
 
 <div id="stu" style="display: block;">
