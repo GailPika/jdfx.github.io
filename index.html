@@ -41,8 +41,8 @@
                 .getHours() + "时" + time.getMinutes() + "分" + time.getSeconds() + "秒";
             qjksTime = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + (time.getDate() - 2);
             qjjsTime = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate();
-            EnterTime = "进入时间：" + time.getFullYear() + "年" + (time.getMonth() + 1) + "月" + time.getDate() + "日" + time
-                .getHours() + "时" + time.getMinutes() + "分" + time.getSeconds() + "秒";
+            EnterTime = "进入时间：" + time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time
+                .getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
             document.getElementById("times").innerHTML = nowTime;
             document.getElementById("timeName").innerHTML = EnterTime;
             document.getElementById("qjkssj").innerHTML = qjksTime;
